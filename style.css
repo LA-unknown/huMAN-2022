@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bunos-day {
+    background-color: black;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0 20px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 1px solid gray;
+    align-items: center;
+}
+
+.top-nav .top-nav-center {
+    font-size: 18px;
+    padding-right: 80px;
+    cursor: pointer;
+}
+
+.top-nav .top-nav-right i {
+    font-size: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 18% 0 18%;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.bottom-nav p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main-content {
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-image: url(./images/Mens/image1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change 10s infinite ease-in-out;
+}
+
+@keyframes change {
+    33.4%{
+        background-image: url(./images/Mens/image2.jpg);
+    }
+    66.7%{
+        background-image: url(./images/Mens/image3.jpg);
+    }
+    100%{
+        background-image: url(./images/Mens/image1.jpg);
+    }
+    
+}
+
+.main-content button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 20px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    top: 40%;
+    font-weight: bold;
+    font-size: 50px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-content button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.main-content button:hover {
+    color: #e8e8e8;
+}
+
+.main-content button:hover::before {
+    width: 100%;
+}
+
+.main-content p {
+    font-size: 48px;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    text-decoration: underline;
+}
+
+/*Guest Long Sleeve*/
+.main-content-longsleeves .list-items {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-content-longsleeves .list-items .item1,
+.main-content-longsleeves .list-items .item2,
+.main-content-longsleeves .list-items .item3 {
+    text-align: center;
+    border: #212121 solid 1px;
+    padding: 30px;
+}
+
+.main-content-longsleeves .list-items img {
+    object-fit: contain;
+    width: 350px;
+    border-radius: 10%;
+}
+
+.main-content-longsleeves .list-items .buynow-addtocart {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.main-content-longsleeves .list-items .buynow-addtocart i {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.main-content-longsleeves .list-items .buynow-addtocart button {
+    width: 11.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.main-content-longsleeves .list-items .buynow-addtocart button:hover {
+    color: black;
+}
+
+.main-content-longsleeves .list-items .buynow-addtocart button:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.main-content-longsleeves .list-items .buynow-addtocart button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.main-content-longsleeves .see-more {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.main-content-longsleeves .see-more button {
+    padding: 0 1em;
+    border: 4px solid black;
+    transition: ease-in-out 0.3s;
+    background-color: transparent;
+    color: black;
+    font-weight: bolder;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.main-content-longsleeves .see-more button:hover {
+    transform: scale(1.2) rotate(10deg);
+    background-color: black;
+    color: white;
+}
+
+.footer {
+    padding: 0 20px 0 20px;
+    margin-bottom: 30px;
+}
+
+.footer .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .bottom .downloader {
+    display: flex;
+}
+
+.footer .bottom .downloader p {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.footer .bottom .downloader p:hover {
+    text-decoration: underline;
+}
+
+/*Search Tab*/
+
+.search-bar{
+    background-color: gray;
+    text-align: center;
+    width: 35%;
+    height: 700px;
+    position: absolute;
+    top: 193px;
+    left: 925px;
+    z-index: 4;
+    display: none;
+}
+.search-bar .top{
+    margin-top: 25px;
+}
+.search-bar .down{
+    margin-top: 420px;
+}
+
+/*Login Tab*/
+
+.login-bar{
+    background-color: gray;
+    text-align: center;
+    width: 35%;
+    height: 700px;
+    position: absolute;
+    top: 193px;
+    left: 925px;
+    z-index: 4;
+    display: none;
+}
+.login-bar button{
+    padding: 20px 50px;
+    font-size: 18px;
+    border: white solid 2px;
+    background-color: #212121;
+    color: white;
+}
+.login-bar button:hover{
+    border: #212121 solid 2px;
+    background-color: white;
+    color: #212121;
+}
+.login-bar .top{
+    margin-top: 25px;
+}
+.login-bar .down{
+    margin-top: 250px;
+}
+
+/*bar background*/
+
+.bar_background1{
+    background-color: black;
+    opacity: 35%;
+    text-align: center;
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 193px;
+    z-index: 2;
+    display: none;
+}
+.bar_background2{
+    background-color: black;
+    opacity: 35%;
+    text-align: center;
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 193px;
+    z-index: 3;
+    display: none;
+}
